@@ -2,7 +2,9 @@
 <html lang="en" data-framework="angularjs">
 	<head>
 		<meta charset="utf-8">
+		<!-- Bootstrap -->
 
+		<!-- END Bootstrap -->
 		<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
 		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
 		<style>[ng-cloak] { display: none; }</style>
@@ -15,7 +17,7 @@
 				<header id="header">
 				
 					<form id="todo-form" ng-submit="addTodo()">
-						<input id="new-todo" placeholder="Enter Todo List" ng-model="newTodo" ng-disabled="saving" autofocus>
+						<input id="new-todo" placeholder="Enter weekly flowblock" ng-model="newTodo" ng-disabled="saving" autofocus>
 					</form>
 				</header>
 				<section id="main" ng-show="todos.length" ng-cloak>
@@ -46,7 +48,7 @@
 							<a ng-class="{selected: status == 'active'}" href="#/active">Active</a>
 						</li>
 						<li>
-							<a ng-class="{selected: status == 'completed'}" href="#/completed">Completed</a>
+							<a ng-class="{selected: status == 'completed'}" href="#/completed">Completed this week</a>
 						</li>
 					</ul>
 					<button id="clear-completed" ng-click="clearCompletedTodos()" ng-show="completedCount">Clear completed</button>
